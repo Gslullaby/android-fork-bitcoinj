@@ -41,7 +41,7 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         addressHeader = 0;
         p2shHeader = 5;
         acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
-        port = 9996;
+        port = 8888;
         packetMagic = 0xf9beb4d9L;
         bip32HeaderPub = 0x0488B21E; //The 4 byte header that serializes in base58 to "xpub".
         bip32HeaderPriv = 0x0488ADE4; //The 4 byte header that serializes in base58 to "xprv"
@@ -50,16 +50,16 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         majorityRejectBlockOutdated = MAINNET_MAJORITY_REJECT_BLOCK_OUTDATED;
         majorityWindow = MAINNET_MAJORITY_WINDOW;
 
-        genesisBlock.setDifficultyTarget(0x1e00ffffL);
-        genesisBlock.setTime(1515518532L);
-        genesisBlock.setNonce(26055929);
+        genesisBlock.setDifficultyTarget(0x1d00ffff);
+        genesisBlock.setTime(1411666331);
+        genesisBlock.setNonce(2056985438);
         id = ID_MAINNET;
         subsidyDecreaseBlockCount = 210000;
         spendableCoinbaseDepth = 100;
         String genesisHash = genesisBlock.getHashAsString();
 //        checkState(genesisHash.equals("000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"),
 //                genesisHash);
-        checkState(genesisHash.equals("000000c411b2bc60347d9e783590e10009883352209d71cff8751bf3175788b9"),
+        checkState(genesisHash.equals("0000000061b1aca334b059920fed7bace2336ea4d23d63428c7aee04da49e942"),
                 genesisHash);
 
 
@@ -82,10 +82,11 @@ public class MainNetParams extends AbstractBitcoinNetParams {
 //                "bitseed.xf2.org",              // Jeff Garzik
 //                "seed.bitcoin.jonasschnelli.ch",// Jonas Schnelli
 //                "bitcoin.bloqseeds.net",        // Bloq
-                "118.190.152.48",        // Pieter Wuille
-                "120.79.178.156",         // Matt Corallo
-                "120.79.154.159",  // Luke Dashjr
-                "47.96.191.144",  // Lu
+//                "118.190.152.48",        // Pieter Wuille
+//                "120.79.178.156",         // Matt Corallo
+//                "120.79.154.159",  // Luke Dashjr
+//                "47.96.191.144",  // Lu
+                "39.107.75.65",
         };
         httpSeeds = new HttpDiscovery.Details[] {
                 // Andreas Schildbach
